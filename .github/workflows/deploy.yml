@@ -1,4 +1,4 @@
-name: 🚀 Deploy to IPFS via Pinata
+name: Deploy to IPFS via Pinata
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload to Pinata
-        uses: pinata-cloud/pinata-action@v1
+        uses: pinata-cloud/github-action-pinata@v1.0.2
         with:
           pin-name: "my-website-${{ github.sha }}"
           path: "./"
           exclude-hidden: true
-          pinata-api-key: ${{ secrets.PINATA_API_KEY }}
-          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }}      # API Key (e1ab5039...)
+          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }} # API Secret (1aa3ad16...)
