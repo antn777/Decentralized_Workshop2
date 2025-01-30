@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload to Pinata
-        uses: pinata-cloud/github-action-pinata@v1.0.2
+        uses: pinata-cloud/action-pinata-deploy@v1
         with:
           pin-name: "my-website-${{ github.sha }}"
           path: "./"
           exclude-hidden: true
-          pinata-api-key: ${{ secrets.PINATA_API_KEY }}      # API Key (e1ab5039...)
-          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }} # API Secret (1aa3ad16...)
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }}  # Your API Key
+          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}  # Your Secret API Key
