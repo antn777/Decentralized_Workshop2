@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload to Pinata
-        uses: pinata-cloud/action-pinata-deploy@v1
+        uses: aave/pinata-action@v1
         with:
           pin-name: "my-website-${{ github.sha }}"
           path: "./"
