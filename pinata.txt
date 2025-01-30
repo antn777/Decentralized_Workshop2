@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Decentralized Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚀 Hosted on IPFS!</h1>
+  <p>This site is decentralized and powered by Pinata.</p>
+</body>
+</html>
