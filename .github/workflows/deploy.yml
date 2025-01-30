@@ -1,4 +1,4 @@
-name: Deploy to IPFS via Pinata
+name: 🚀 Deploy to IPFS via Pinata
 
 on:
   push:
@@ -11,8 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Upload to IPFS via Pinata
-        uses: PinataWorks/pinata-action@v1
+      - name: Upload to Pinata
+        uses: pinata-cloud/pinata-action@v1
         with:
           pin-name: "my-website-${{ github.sha }}"
           path: "./"
