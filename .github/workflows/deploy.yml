@@ -1,21 +1,24 @@
-name: Deploy to IPFS via Pinata
+name: Deploy to IPFS with Pinata
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  deploy:
+  pin-to-ipfs:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Upload to Pinata
+      - name: Pin to IPFS via Pinata
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
-          pin-name: "my-website-${{ github.sha }}"
-          path: "./"
-          exclude-hidden: true
-          pinata-api-key: ${{ secrets.PINATA_API_KEY }}  # Your API Key
-          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}  # Your Secret API Key
+          pin-name: 'My personal site'
+          path: './build'
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
+          verbose: true
+          remove-old: false
