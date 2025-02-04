@@ -19,6 +19,6 @@ jobs:
           pin-name: 'My personal site'
           path: './build'
           pinata-api-key: ${{ secrets.PINATA_API_KEY }}
-          pinata-secret-api-key: ${{ secrets.PINATA_SECRET_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}
           verbose: true
           remove-old: false
